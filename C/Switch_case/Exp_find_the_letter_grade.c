@@ -7,8 +7,9 @@ int main() {
 
 	printf("Enter the grade: ");
 	scanf_s("%d", &grade);
-	if(grade<=100)
-	{ 
+	
+	if(grade<=100){ 
+		
 	switch (grade / 10) {
 	case 1:
 	case 2:
