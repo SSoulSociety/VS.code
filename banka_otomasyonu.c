@@ -2,6 +2,7 @@
 
 int main(void) {
 
+//basic banka otomasyonu switch case kullnarak
     
 
 

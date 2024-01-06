@@ -2,10 +2,13 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(void) 
+{
     
-    for(int x = 1; x <= 10; x++) {
-        if (x == 5) {
+    for(int x = 1; x <= 10; x++) 
+    {
+        if (x == 5) 
+        {
             continue; // The part after the continue does not work
         }
         printf("%d " , x);

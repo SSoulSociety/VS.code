@@ -1,12 +1,15 @@
 //break and continue statemnents part 1
 #include <stdio.h>
 
-int main(void) {
+int main(void) 
+{
     
     int x = 1;
 
-    for(; x <= 10; x++) {
-        if (x == 5) {
+    for(; x <= 10; x++) 
+    {
+        if (x == 5) 
+        {
             break;
         }
         printf("%d " , x);
