@@ -5,13 +5,19 @@ int bakiye = 1000;
 int islem;
 int tutar;
 
+do
+{
+
     printf("Lutfen bir islem seciniz:\n---------------------------- \n Para cekme:(1)\n Para yatirma:(2)\n Eft yapma:(3)\n Bakiye sorgula:(4)\n Kart iade:(5)\n----------------------------\n");
     scanf("%d", islem);
     if(islem > 5)
     {
-    printf("Bilinmeyen işlem, lütfen 1-6 arasi bir sayi giriniz:");
+    printf("Bilinmeyen işlem, lütfen 1-5 arasi bir sayi giriniz:");
     }
    
+
+}while(islem >=5);
+
 switch (islem)
 {
     case 1:
@@ -24,14 +30,6 @@ switch (islem)
         printf("Girilecek tutari giriniz:\n ");
         break;
 
-
-        
-        
-
-}
-
-   
-
-
+} 
     return 0;
 }
