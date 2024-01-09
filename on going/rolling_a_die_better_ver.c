@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> //rand() comes from this header
+#include <stdlib.h> //rand() comes with this header
 
 int main(void) {
     int f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0, f6 = 0;
