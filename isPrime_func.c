@@ -1,37 +1,38 @@
-#include <stdio.h>
+    #include <stdio.h>
 
-void isPrime(int x) 
-{
-
-    for(int i = 2; i < x; ++i)
+    int isPrime(int x) 
     {
-        if(x % i == 0)
+        int prime;
+        for(int i = 2; i < x; ++i)
         {
-            printf("This number is prime.");
+            if(x % i == 0)
+            {
+            prime = 0;
+            }
+            else
+            {
+                prime = 1;
+            }
+        }
+    return prime;
+    }
+
+    int main(void)
+    {
+        int number;
+        printf("Enter a number greater than 2 pls: ");
+        scanf("%d" , &number);
+        if(number > 2)
+        {
+            printf("invalid value!!!");
         }
         else
         {
-            printf("This number is not prime.");
-        }
+          
+            printf("%d" , isPrime(number));
+        }  
+
+
+
+        return 0;
     }
-
-}
-
-int main(void)
-{
-    int number;
-    printf("Enter a number greater than 2 pls: ");
-    if(number > 2)
-    {
-        printf("invalid value!!!");
-    }
-    else
-    {
-    scanf("%d" , &number);
-    printf(isPrime(number));
-    }  
-
-
-
-    return 0;
-}
