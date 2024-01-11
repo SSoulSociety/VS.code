@@ -8,12 +8,12 @@ int main(void)
         {
             printf("*");
         }
-        int b = 10 - 2*i;
+        int b = 10 - 2 * i;
         for (int a = 1; a <= b; ++a)
         {
             printf(" ");
         }
-         for (int j = 1; j <= i; ++j)
+        for (int j = 1; j <= i; ++j)
         {
             printf("*");
         }
