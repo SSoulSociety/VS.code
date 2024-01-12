@@ -1,5 +1,5 @@
 #include <stdio.h>
-int square(int number); // fuction prototype
+int square(int); // fuction prototype
 
 int main(void)
 {
