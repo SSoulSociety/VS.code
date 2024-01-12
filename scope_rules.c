@@ -28,6 +28,7 @@ int main(void)
     useLocal();       // useLocal has automatic local x
     useStaticLocal(); // useStaticLocal has static local x
     useGlobal();      // useGlobal uses global x
+
     useLocal();       // useLocal reinitializes automatic local x
     useStaticLocal(); // static local x retains its prior value
     useGlobal();      // global x also retains its value
@@ -35,7 +36,7 @@ int main(void)
     printf("\nlocal x in main is %d\n", x);
 }
 
-// useLocal reinitializes local variable x duringeach call
+// useLocal reinitializes local variable x during each call
 void useLocal(void)
 {
     int x = 25; // initialized each time useLocal is called
@@ -44,17 +45,16 @@ void useLocal(void)
     ++x;
     printf("local x in useLocal is %d before exiting useLocal\n", x);
 }
-// useStaticLocal initializes static local variable x onlythe first time
-// the function is called; value of x is saved between calls to this
-// function
 
+// useStaticLocal initializes static local variable x only the first time
+// the function is called; value of x is saved between calls to this function
 void useStaticLocal(void)
 {
     static int x = 50; // initialized once
 
-printf("\nlocal static x is %d on entering useStaticLocal\n", x);
- ++x;
- printf("local static x is %d on exiting useStaticLocal\n", x);
+    printf("\nlocal static x is %d on entering useStaticLocal\n", x);
+    ++x;
+    printf("local static x is %d on exiting useStaticLocal\n", x);
 }
 // function useGlobal modifies global variable x during each call
 void useGlobal(void)
