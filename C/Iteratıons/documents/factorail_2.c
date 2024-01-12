@@ -1,31 +1,29 @@
 // factorail by using (for)
 #include <stdio.h>
-int main(void) 
+int main(void)
 {
 
-    int number, factorail=1;
+    int number, factorail = 1;
     printf("Enter a number please: ");
-    scanf("%d" , &number);
+    scanf("%d", &number);
 
-    if (number == 0) 
+    if (number == 0)
     {
-    factorail = 1;
-    printf("factorail is: %d" , factorail);
+        factorail = 1;
+        printf("factorail is: %d", factorail);
     }
-    else if (number < 0) 
+    else if (number < 0)
     {
-    printf("Wrong value, enter a positive integer please!");
+        printf("Wrong value, enter a positive integer please!");
     }
-    else 
+    else
     {
-        for(; number>0; number--) 
+        for (; number > 0; number--)
         {
             factorail = factorail * number;
-
         }
-         printf("factorail is: %d" , factorail);
+        printf("factorail is: %d", factorail);
     }
-    
 
     return 0;
 }

@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-int numofdays;
+int main()
+{
+	int numofdays;
 
-printf("Enter the number day from today: ");
-scanf("%d", &numofdays);
+	printf("Enter the number day from today: ");
+	scanf("%d", &numofdays);
 
 	printf("Calculated day is ");
 
-	switch (numofdays = numofdays % 7) {
+	switch (numofdays = numofdays % 7)
+	{
 	case 0:
 		printf("Friday\n");
 		break;

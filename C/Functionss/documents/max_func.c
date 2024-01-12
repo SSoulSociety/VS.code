@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int max(int num1, int num2, int num3); //function prototype
+int max(int num1, int num2, int num3); // function prototype
 
 int main(void)
 {

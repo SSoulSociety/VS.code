@@ -1,12 +1,13 @@
 #include <stdio.h>
-int factorial(int number);// function prototype
+int factorial(int number); // function prototype
 
-int main(void){
-int number;
+int main(void)
+{
+    int number;
 
-printf("enter a number:");
-scanf("%d" ,&number);
-printf("Factorail is: %d", factorial(number));
+    printf("enter a number:");
+    scanf("%d", &number);
+    printf("Factorail is: %d", factorial(number));
 
     return 0;
 }
@@ -15,10 +16,10 @@ int factorial(int number)
 {
     int factorial = 1;
 
-    for(;number >=1; --number)
+    for (; number >= 1; --number)
     {
         factorial *= number;
     }
-    
+
     return factorial;
 }

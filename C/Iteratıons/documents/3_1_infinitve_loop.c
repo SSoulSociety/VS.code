@@ -1,24 +1,25 @@
 #include <stdio.h>
 
-int main (void)
+int main(void)
 {
-    int number,sum=0;
+    int number, sum = 0;
 
-    for(;;) /*Infinite loop*/
+    for (;;) /*Infinite loop*/
     {
         printf("Enter a number: <press -1 to exit> ");
         scanf("%d", &number);
 
-        if(number == -1)
+        if (number == -1)
         {
-            break;;
+            break;
+            ;
         }
-        else 
-        { 
-           
+        else
+        {
+
             sum = sum + number;
         }
     }
-    printf("%d" , sum);
+    printf("%d", sum);
     return 0;
 }

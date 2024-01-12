@@ -7,25 +7,17 @@ int main(void)
     float delta, root1, root2;
 
     printf("Enter the a please: ");
-    scanf("%d" , &a);
+    scanf("%d", &a);
     printf("Enter the b please: ");
-    scanf("%d" , &b);
+    scanf("%d", &b);
     printf("Enter the c please: ");
-    scanf("%d" , &c);
+    scanf("%d", &c);
 
-    delta = (b*b) - (4*a*c);
-    root1 = (-b + (sqrt(delta)) ) / (2*a);
-    root2 = (-b - (sqrt(delta)) ) / (2*a);
+    delta = (b * b) - (4 * a * c);
+    root1 = (-b + (sqrt(delta))) / (2 * a);
+    root2 = (-b - (sqrt(delta))) / (2 * a);
 
-    printf("root1 and root2: %.2f %.2f" ,root1, root2);
-
-
-
-
-
-
-
-
+    printf("root1 and root2: %.2f %.2f", root1, root2);
 
     return 0;
 }
