@@ -21,4 +21,4 @@ unsigned long long int factorial(int number)
     {
         return (number * factorial(number - 1));
     }
-}s
+}
