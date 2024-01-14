@@ -12,53 +12,53 @@ player’s “point.”
 player loses by rolling a 7 before making the point. */
 
 #include <stdio.h>
-#include <stdlib.h> // rand()
-#include <time.h>   // time(NULL)
+#include <stdlib.h>
+#include <time.h>
 
-enum Status
+enum gameStatus
 {
-    CONTINUE,
     WON,
-    LOST
+    LOST,
+    CONTINUE
 };
-
-int rollDice(void); // fucntion prototype
+int rollDice(void);
 
 int main(void)
 {
     srand(time(NULL));
-    int sum = rollDice();
     int myPoint = 0;
-    int gameStatus;
+    int roll = rollDice();
+    int gameStatus = 0;
 
-    switch (sum)
+    switch (roll)
     {
     case 7:
     case 11:
         gameStatus = WON;
+        printf("You WON!\n");
         break;
     case 2:
     case 3:
     case 12:
         gameStatus = LOST;
+        printf("You LOST\n!");
         break;
     default:
         gameStatus = CONTINUE;
-        myPoint = sum;
-        printf("\nMy point is: %d\n", myPoint);
-        break;
+        myPoint = roll;
+        printf("Your point is: %d\n", roll);
     }
+
     while (gameStatus == CONTINUE)
     {
-        sum = rollDice();
-        if (myPoint == sum)
+        int a = rollDice();
         {
-            printf("\ngameStatus: WON! \n");
+            printf("You WON!\n");
             gameStatus = WON;
         }
-        else if ( 7 == sum )
+        else if (7 == a)
         {
-            printf("\nTotal of second roll is 7 so gameStatus: LOST! \n");
+            printf("You LOST\n");
             gameStatus = LOST;
         }
     }
@@ -66,13 +66,13 @@ int main(void)
     return 0;
 }
 
-int rollDice(void) // it returns integer but do not take anyhting so we use *int fuction(void)*
+int rollDice()
 {
-    int dice1, dice2;
+    int dice1 = (rand() % 6) + 1;
+    int dice2 = (rand() % 6) + 1;
 
-    dice1 = (rand() % 6) + 1;
-    dice2 = (rand() % 6) + 1;
-    printf("\nFirst dice %d, second dice %d, sum = %d\n", dice1, dice2, dice1 + dice2);
+    printf("\n dice 1 = %d, dice 2 = %d\n", dice1, dice2);
+    printf("\n total is: %d\n", dice1 + dice2);
 
     return dice1 + dice2;
 }

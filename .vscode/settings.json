@@ -1,7 +1,5 @@
 {
     "files.associations": {
-        "HOCA.C": "cpp",
-        "SADSADSA.C": "cpp",
-        "stdio.h": "c"
+        "cmath": "c"
     }
 }

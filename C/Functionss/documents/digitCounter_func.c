@@ -16,12 +16,12 @@ int main(void)
 // function definiton
 int countDigit(int number)
 {
-    int counter = 0, fake, digit;
-    fake = number;
-    while (fake != 0)
+    int counter = 0, original, digit;
+    original = number;
+    while (original != 0)
     {
-        digit = fake % 10;
-        fake /= 10;
+
+        original /= 10;
         ++counter;
     }
 

@@ -1,35 +1,33 @@
 #include <stdio.h>
-void convertBin(int number); // function prototype
 
-int main(void)
+long toBin(int a);
+
+int main()
 {
-    int number;
+    long binary;
+    int dec;
 
-    printf("Enter a number to convert binary: ");
-    scanf("%d", &number);
-
-    convertBin(number);
+    printf(" Input any decimal number : ");
+    scanf("%d",&dec);
+    
+    binary = toBin(dec);
+    printf("\n The Binary value is : %ld\n\n",binary);
 
     return 0;
 }
-void convertBin(int number) // function defintion
-{
-    int original = number;
-    int remain, binary ;
-    printf("Binary representation: ");
 
-    while (original != 0)
-    {
-        remain = (original % 2);
-        if (remain == 0)
-        {
-            printf("%d" , 1);
-        }
-        else
-        {
-            printf("%d" , 0);
-        }
-        original /= 2;
-    }
+long toBin(int a){
     
+    long binary=0;
+    int remainder; 
+    int f = 1;
+
+    while(a != 0)
+    {
+         remainder = a % 2;
+         binary = binary + remainder * f;
+         f = f * 10;
+         a = a / 2;
+    }
+    return binary;
 }
