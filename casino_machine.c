@@ -1,24 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int rollDice(int a)
-{
-    int roll;
-    srand(time(NULL));
-    roll = ((rand() % 6) + 1);
-    return roll;
-}
-
-int main(void)
-{
-    int WON, LOST, CONTINUE;
-    int x;
-    printf(rollDice(x));
-
-    return 0;
-}
-
 /* Popular dice game known as “craps.”
 • A player rolls two dice. Each die has six faces. These faces contain 1, 2, 3, 4, 5,
 and 6 spots.
@@ -31,3 +10,69 @@ faces is calculated.
 player’s “point.”
 • To win, you must continue rolling the dice until you “make your point.” The
 player loses by rolling a 7 before making the point. */
+
+#include <stdio.h>
+#include <stdlib.h> // rand()
+#include <time.h>   // time(NULL)
+
+enum Status
+{
+    CONTINUE,
+    WON,
+    LOST
+};
+
+int rollDice(void); // fucntion prototype
+
+int main(void)
+{
+    srand(time(NULL));
+    int sum = rollDice();
+    int myPoint = 0;
+    int gameStatus;
+
+    switch (sum)
+    {
+    case 7:
+    case 11:
+        gameStatus = WON;
+        break;
+    case 2:
+    case 3:
+    case 12:
+        gameStatus = LOST;
+        break;
+    default:
+        gameStatus = CONTINUE;
+        myPoint = sum;
+        printf("\nMy point is: %d\n", myPoint);
+        break;
+    }
+    while (gameStatus == CONTINUE)
+    {
+        sum = rollDice();
+        if (myPoint == sum)
+        {
+            printf("\ngameStatus: WON! \n");
+            gameStatus = WON;
+        }
+        else if ( 7 == sum )
+        {
+            printf("\nTotal of second roll is 7 so gameStatus: LOST! \n");
+            gameStatus = LOST;
+        }
+    }
+
+    return 0;
+}
+
+int rollDice(void) // it returns integer but do not take anyhting so we use *int fuction(void)*
+{
+    int dice1, dice2;
+
+    dice1 = (rand() % 6) + 1;
+    dice2 = (rand() % 6) + 1;
+    printf("\nFirst dice %d, second dice %d, sum = %d\n", dice1, dice2, dice1 + dice2);
+
+    return dice1 + dice2;
+}

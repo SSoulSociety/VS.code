@@ -13,6 +13,6 @@ int main(void)
     {
         sum = s[i] + sum;
     }
-    printf("Avarage of these number is: %d", sum / 5);
+    printf("\nAvarage of these number is: %d", sum / 5);
     return 0;
 }

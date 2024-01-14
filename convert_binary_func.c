@@ -15,22 +15,21 @@ int main(void)
 void convertBin(int number) // function defintion
 {
     int original = number;
-    int remain, sum = 1;
-    sum = (original % 2);
-    original /= 2;
+    int remain, binary ;
+    printf("Binary representation: ");
 
     while (original != 0)
     {
         remain = (original % 2);
         if (remain == 0)
         {
-            sum = (sum * 10);
+            printf("%d" , 1);
         }
         else
         {
-            sum = (sum * 10) + 1;
+            printf("%d" , 0);
         }
         original /= 2;
     }
-    printf("Binary representation: %d\n", sum);
+    
 }
