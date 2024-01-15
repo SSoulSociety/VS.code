@@ -6,7 +6,7 @@
 #define SIZE 5
 
 void modifyArray(int b[], int size);
-void modifyElement(int k); // why dont we say []
+void modifyElement(int k); 
 
 int main(void)
 {

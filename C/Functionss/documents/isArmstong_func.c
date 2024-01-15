@@ -1,37 +1,65 @@
 #include <stdio.h>
+#include <math.h>
 
-void isArmstrong(int x); // function prototype
+int armstrongCheck(int num);
+int palindromeCheck(int num);
+int numberOfDigits(int num);
 
-int main(void)
-{
-    int number;
-    printf("enter a number please: ");
+int main(void){
+    int number=0;
+    printf("Enter your number to calculate: ");
     scanf("%d", &number);
-    isArmstrong(number);
+    
+    if(armstrongCheck(number)&&palindromeCheck(number)){
+        printf("%d is both armstrong and palindrome.", number);
+    }else if(armstrongCheck(number)==1){
+        printf("%d is only armstrong.", number);
+    }else if(palindromeCheck(number)==1){
+        printf("%d is only palindrome.", number);
+    }else{
+        printf("%d is not a special number.", number);
+    }
+    
     return 0;
 }
 
-void isArmstrong(int x)
-{
-    int a, b, digit, sum = 0;
-    int original = x;
-    printf("How many digits number has: ");
-    scanf("%d", &digit);
-
-    for (int i = 1; i <= digit; ++i)
-    {
-        a = (original % 10);
-        b = a * a * a;
-        sum += b;
-        original /= 10;
+int armstrongCheck(int num){
+    int sum=0;
+    int hold=num;
+    int digits= numberOfDigits(num);
+    while(num>0){
+        sum=pow(num%10, digits)+sum;
+        num=num/10;
     }
-
-    if (sum == x)
-    {
-        printf("it is Armstrong");
+    //printf("%d", sum);
+    if(hold==sum){
+        return 1;
+    }else{
+        return 0;
     }
-    else
-    {
-        printf("it is not Armstrong!!!");
+}
+
+int numberOfDigits(int num){
+    int digits=0;
+    while(num>0){
+        num=num/10;
+        digits++;
+    }
+    //printf("%d", digits);
+    return digits;
+}
+
+int palindromeCheck(int num){
+    int sum=0;
+    int hold=num;
+    while(num>0){
+        sum=sum*10+num%10;
+        num=num/10;
+    }
+    //printf("%d", sum);
+    if(sum==hold){
+        return 1;
+    }else{
+        return 0;
     }
 }

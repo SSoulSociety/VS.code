@@ -52,7 +52,9 @@ int main(void)
     while (gameStatus == CONTINUE)
     {
         int a = rollDice();
+        if(roll == myPoint)
         {
+            
             printf("You WON!\n");
             gameStatus = WON;
         }
