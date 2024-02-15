@@ -6,7 +6,7 @@ int main(void)
 
     for (;;) /*Infinite loop*/
     {
-        printf("Enter a number: <press -1 to exit> ");
+        printf("Enter a number to sum: \n <press -1 to exit> ");
         scanf("%d", &number);
 
         if (number == -1)

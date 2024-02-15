@@ -1,33 +1,33 @@
 #include <stdio.h>
 
-long toBin(int a);
+long toBinary(int a);
 
 int main()
 {
     long binary;
-    int dec;
+    int decimal;
 
     printf(" Input any decimal number : ");
-    scanf("%d",&dec);
+    scanf("%d",&decimal);
     
-    binary = toBin(dec);
+    binary = toBinary(decimal);
     printf("\n The Binary value is : %ld\n\n",binary);
 
     return 0;
 }
 
-long toBin(int a){
+long toBinary(int decimal){
     
     long binary=0;
     int remainder; 
     int f = 1;
 
-    while(a != 0)
+    while(decimal != 0)
     {
-         remainder = a % 2;
+         remainder = decimal % 2;
          binary = binary + remainder * f;
          f = f * 10;
-         a = a / 2;
+         decimal = decimal / 2;
     }
     return binary;
 }

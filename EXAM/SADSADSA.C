@@ -1,5 +1,0 @@
-/*
-1) İÇİ BOŞ KARE YILDIZLARDAN    
-2) İÇİ BOS BAKLAVA DİLİMİ
-3) İÇİ DOLU BAKLAVA DİLİMİ
-*/
