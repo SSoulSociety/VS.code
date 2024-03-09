@@ -9,7 +9,7 @@ int main(void)
     printf("\nValue of a is %d\nValue of *aPtr is %d\n\n", a, *aPtr);
     printf("Showing that * and & are complements of each other\n");
     printf("&*aPtr = %p\n*&aPtr = %p\n", &*aPtr, *&aPtr);
-    // aPtr coresspond to adress of a while *aPtre correspond to value of a
+    // aPtr coresspond to adress of a while *aPtr correspond to value of a
     
     return 0;
 }
