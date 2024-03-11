@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int add(int x, int y); // fucntion prototype
+int add(int num1, int num2); // fucntion prototype
 
 int main(void)
 {
@@ -18,4 +18,4 @@ int add(int num1, int num2)
 {
 
     return num1 + num2;
-}sadsad 
+}
