@@ -8,6 +8,7 @@ int main(void)
     printf("The original value of number is %d", number);
     cubeByReference(&number); // pass address of number to cubeByReference
     printf("\nThe new value of number is %d\n", number);
+    
     // what if I do one more time
     cubeByReference(&number);
     printf("\nThe new new new value of number is %d\n", number);

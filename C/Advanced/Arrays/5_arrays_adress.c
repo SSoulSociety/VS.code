@@ -4,8 +4,8 @@
 
 int main(void)
 {
-char array[5] = ""; // define a char array of size 5
-printf(" array = %p\n&array[0] = %p\n &array = %p\n", array , &array[0] , &array);
-// in output you gonna see their adress' are the same
-return 0;
+    char array[5] = ""; // define a char array of size 5
+    printf(" array = %p\n&array[0] = %p\n &array = %p\n", array, &array[0], &array);
+    // in output you gonna see their adress' are the same
+    return 0;
 }

@@ -19,7 +19,7 @@ int main(void)
         printf("%3d", a[i]);
     }
 
-    modifyArray(a, SIZE);
+    modifyArray(a, SIZE); // only name of array and its size as a parameter of function
     printf("\nThe values of the modified array are:\n");
 
     for (int i = 0; i < SIZE; i++)
