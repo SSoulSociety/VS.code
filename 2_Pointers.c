@@ -4,6 +4,7 @@ int main(void)
 {
     int a = 7;
     int *aPtr = &a;
+    
     // %p prints adres as a hexadecimel integer
     printf("Address of 'a' is %p\nValue of aPtr is %p\n", &a, aPtr);
     printf("\nValue of 'a' is %d\nValue of *aPtr is %d\n\n", a, *aPtr);
