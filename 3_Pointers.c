@@ -19,4 +19,4 @@ int main(void)
 int cubeByValue(int n)
 {
     return n * n * n; // cube local variable n and return result
-}
+} 
