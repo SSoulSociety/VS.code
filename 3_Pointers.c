@@ -11,7 +11,7 @@ int main(void)
     printf("\nThe new value of number is %d\n", number);
     //lets try one more time to see what happens
     number = cubeByValue(number); // pass number by value to cubeByValue
-    printf("\nThe new new new new value of number is %d\n", number);
+    printf("\nThe  new new new new value of number is %d\n", number);
     
     return 0;
 }
