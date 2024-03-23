@@ -7,24 +7,24 @@ passed by reference
 
 // Buble Sort Using Pass-by-Reference
 #include <stdio.h>
-#define SIZE 10
+
 void bubleSort(int *array, int size);
 void swap(int *a, int *b);
 
 int main(void)
 {
-    int array[SIZE] = {1, 5, 13, 213, 126, 20, 0, 77, 912, 2301};
+    int array[10] = {1, 5, 13, 213, 126, 20, 0, 77, 912, 2301};
     printf("Original array: \n");
-    for (int i = 0; i < SIZE; i++)
+    for (int i = 0; i < 10; i++)
         printf("%d ", array[i]);
-    printf("\n");
+    puts("");
 
-    bubleSort(array, SIZE);
+    bubleSort(array, 10);
 
     printf("Sorted array: \n");
-    for (int i = 0; i < SIZE; i++)
+    for (int i = 0; i < 10; i++)
         printf("%d ", array[i]);
-    printf("\n");
+    puts("");
 
     return 0;
 }
@@ -38,9 +38,9 @@ void swap(int *a, int *b) // A parameter of the form int b[] is converted to int
 
 void bubleSort(int *array, int size)
 {
-    for (int i = 0; i < SIZE; ++i)
+    for (int i = 0; i < 10; ++i)
     {
-        for (int j = 0; j < SIZE - 1; ++j)
+        for (int j = 0; j < 10 - 1; ++j)
         {
             if (*(array + j) > *(array + j + 1))
             {

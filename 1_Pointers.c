@@ -1,10 +1,12 @@
-#include <stdio.h>
-/* We use pointers for:
+/* 
+-We use pointers for:
 -pass by reference
 -pass functions between functions
 -manipualte strings and arrays
--dynamic data structers */
+-dynamic data structers 
+*/
 
+#include <stdio.h>
 int main(void)
 {
     int *countPtr, count; // * does not affect the second varaiables
