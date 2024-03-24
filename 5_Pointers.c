@@ -1,8 +1,7 @@
-/*Passing Arguments to Functions by Reference
+/*
 •The compiler does not differentiate between a function that receives a pointer
 and one that receives a one-dimensional array
-•The function must “know” when it’s receiving an array versus. a single variable
-passed by reference
+•The function must “know” when it’s receiving an array versus a single variable
 */
 
 // Buble Sort Using Pass-by-Reference
