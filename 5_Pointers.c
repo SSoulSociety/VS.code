@@ -41,7 +41,7 @@ void bubleSort(int *array, int size)
     {
         for (int j = 0; j < 10 - 1; ++j)
         {
-            if (*(array + j) > *(array + j + 1))
+            if (*(array + j) > *(array + j + 1)) //why we dont use * you know it remember becasue it'a array
             {
                 swap(array + j, array + j + 1);
             }
