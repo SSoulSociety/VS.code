@@ -16,4 +16,4 @@ Assigning Pointers to One Another
 •The compiler must know the type to determine the number of bytes that represent the referenced value
 */
 
-// •bPtr = b; same bPtr = &b[0];
+// •bPtr = b; is same with bPtr = &b[0];
