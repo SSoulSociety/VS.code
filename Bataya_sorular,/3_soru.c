@@ -2,8 +2,9 @@
     struct adress
     {
         char street[20];
-    };
-
+    };  
+    //struct adress example = {"Mehmet Uzun Cad."};  boyle neden olmuyor=??
+   
 
     struct employee
     {
@@ -13,7 +14,7 @@
         double hourlySalary;
         struct adress street; // A struct may not contain a variable of its own struct type, but it may contain a pointer to that struct type
     };
-    struct employee best = {"mehmet", "lale", 19, 132.4, {"Mehmet Uzun Cad."}};
+    struct employee best = {"mehmet", "lale", 19, 132.4, {"Mehmet Uzun Cad."}}; 
 
     int main(void)
     {
