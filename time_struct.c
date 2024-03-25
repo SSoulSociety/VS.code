@@ -2,5 +2,7 @@
 
 struct time
 {
-    /* data */
+    int hours;
+    int minutes;
+    int second;
 };
