@@ -15,12 +15,24 @@ int main(void)
 
 void deneme(void)
 {
-
+    // The first way
     typedef struct car
     {
         int fuel_tank;
         char engine[20];
         char colour[20];
         char brand[20];
-    }car_type;
+    } car_type; // after that we will write car_type instead of struct car for the rest of declrations
+}
+
+void deneme(void)
+{
+    // The second way
+    typedef struct car car_type; // after that we will write car_type instead of struct car for the rest of declrations
+    {
+        int fuel_tank;
+        char engine[20];
+        char colour[20];
+        char brand[20];
+    }
 }
