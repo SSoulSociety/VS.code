@@ -2,6 +2,8 @@
 
 int main(void){
 
+    char greetings[] = "Hello!";
+    printf("%s" , greetings);
 
 
 

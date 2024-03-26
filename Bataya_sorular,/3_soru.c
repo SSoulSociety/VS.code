@@ -2,8 +2,8 @@
     struct adress
     {
         char street[20];
+
     };  
-    //struct adress example = {"Mehmet Uzun Cad."};  boyle neden olmuyor=??
    
 
     struct employee
