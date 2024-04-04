@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <ctype.h>
 
-//int isDigit(int a); kendin yaz bide
-
+int isDigit(int n); // protoype
 int main(void)
 {
-    int x;
+    char x;
 
     printf("Enter your argument to find if it is a digit or not: ");
-    scanf("%d", &x);
+    scanf("%c", &x);
 
-    if (isdigit(x))
+    if (isDigit(x))
     {
         printf("It is a digit.\n");
     }
@@ -20,4 +19,17 @@ int main(void)
     }
 
     return 0;
+}
+
+int isDigit(int n)
+{
+
+    if (n <= '9' && n >= '0')
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
