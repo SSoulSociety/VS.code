@@ -24,7 +24,7 @@ int main(void)
 
     for (int i = 0; i < number; ++i)
     {
-        print("Which number u wanna add to the list?:\n ");
+        printf("Which number u wanna add to the list?:\n ");
         scanf("%d", &c);
         insert(c);
         printList();
@@ -36,19 +36,26 @@ void insert(int x)
 {
 
     struct node *temp = malloc(sizeof(struct node));
-    temp->data = x;
-    temp->next = head;
-    head = temp;
+    if (temp == NULL)
+    {
+        printf("memory cannot be allocated!");  
+    }
+    else
+    {
+        temp->data = x;
+        temp->next = head;
+        head = temp; // bu satırı analamdım
+    }
 }
 
 void printList()
 {
-    struct node *temp = malloc(sizeof(struct node));
+    struct node *temp = head; // bruda neden malloc kulanmadık??
     printf("List is: ");
     while (temp != NULL)
     {
-        printf("List is: ");
-        printf("%d", temp->data);
+
+        printf("%d ", temp->data);
         temp = temp->next;
     }
     printf("\n ");
