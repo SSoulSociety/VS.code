@@ -1,36 +1,55 @@
+// Lineked list: inserting a noed at beginnig
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
-
+struct node
 {
 
-    struct node
+    int data;
+    struct node *next;
+};
+
+struct node *head;
+
+void insert(int x);
+void printList();
+
+int main(void)
+{
+    head = NULL;
+
+    int number, c;
+    printf("How many number?: ");
+    scanf("%d", &number);
+
+    for (int i = 0; i < number; ++i)
     {
-        int data;
-        struct node *link;
-    };
-
-    struct node *A = NULL; // Empty list
-
-    struct node *temp = malloc(sizeof(struct node));
-
-    temp->data = 2;
-    temp->link = NULL;
-    A = temp;
-
-    struct node *temp = malloc(sizeof(struct node));
-    temp->data = 4;
-    temp->link = NULL;
-
-    // generic logit to reach end of the list
-    struct node *temp1 = A; // we don't modify A because if we lost it we lost the head node we lost the whole list
-    while (temp1->link != NULL)
-    {
-        temp1 = temp1->link;
-        printff("%d", temp->data);
+        print("Which number u wanna add to the list?:\n ");
+        scanf("%d", &c);
+        insert(c);
+        printList();
     }
-
-    temp1->link = temp;
     return 0;
+}
+
+void insert(int x)
+{
+
+    struct node *temp = malloc(sizeof(struct node));
+    temp->data = x;
+    temp->next = head;
+    head = temp;
+}
+
+void printList()
+{
+    struct node *temp = malloc(sizeof(struct node));
+    printf("List is: ");
+    while (temp != NULL)
+    {
+        printf("List is: ");
+        printf("%d", temp->data);
+        temp = temp->next;
+    }
+    printf("\n ");
 }
