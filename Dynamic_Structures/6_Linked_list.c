@@ -1,4 +1,4 @@
-// Lineked list: inserting a noed at beginnig
+// Lineked list: inserting a node at beginnig
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -35,7 +35,7 @@ int main(void)
 void insert(int x)
 {
 
-    struct node *temp = malloc(sizeof(struct node));
+    struct node *temp = malloc(sizeof(struct node)); // neden malloc kulalnıyoruz?
     if (temp == NULL)
     {
         printf("memory cannot be allocated!");  
