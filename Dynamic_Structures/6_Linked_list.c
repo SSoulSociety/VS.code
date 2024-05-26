@@ -1,30 +1,25 @@
-// Lineked list: inserting a node at beginnig
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node
-{
-
+struct node {
     int data;
     struct node *next;
 };
 
-struct node *head;
+struct node *head; // Global pointer to the head of the list
 
-void insert(int x);
-void printList();
+void insert(int x); // Prototype for insert function
+void printList();   // Prototype for printList function
 
-int main(void)
-{
-    head = NULL;
+int main(void) {
+    head = NULL; // Initialize the list as empty
 
     int number, c;
-    printf("How many number?: ");
+    printf("How many numbers? ");
     scanf("%d", &number);
 
-    for (int i = 0; i < number; ++i)
-    {
-        printf("Which number u wanna add to the list?:\n ");
+    for (int i = 0; i < number; ++i) {
+        printf("Which number do you want to add to the list? ");
         scanf("%d", &c);
         insert(c);
         printList();
@@ -32,31 +27,23 @@ int main(void)
     return 0;
 }
 
-void insert(int x)
-{
-
-    struct node *temp = malloc(sizeof(struct node)); // neden malloc kulalnıyoruz?
-    if (temp == NULL)
-    {
-        printf("memory cannot be allocated!");  
-    }
-    else
-    {
+void insert(int x) {
+    struct node *temp = malloc(sizeof(struct node)); // Allocate memory for a new node
+    if (temp == NULL) {
+        printf("Memory cannot be allocated!\n"); // Handle memory allocation failure
+    } else {
         temp->data = x;
-        temp->next = head;
-        head = temp; // bu satırı analamdım
+        temp->next = head; // Point the new node to the current head
+        head = temp;       // Update the head to the new node
     }
 }
 
-void printList()
-{
-    struct node *temp = head; // bruda neden malloc kulanmadık??
+void printList() {
+    struct node *temp = head; // Start from the head of the list
     printf("List is: ");
-    while (temp != NULL)
-    {
-
-        printf("%d ", temp->data);
-        temp = temp->next;
+    while (temp != NULL) {
+        printf("%d ", temp->data); // Print the data of each node
+        temp = temp->next;         // Move to the next node
     }
-    printf("\n ");
+    printf("\n"); // Print a newline at the end
 }
