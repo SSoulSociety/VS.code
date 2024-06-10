@@ -8,8 +8,8 @@ struct node {
 
 struct node *head; // Global pointer to the head of the list
 
-void insert(int x); // Prototype for insert function
-void printList();   // Prototype for printList function
+void insert(int x); // Prototype 
+void printList();   
 
 int main(void) {
     head = NULL; // Initialize the list as empty
@@ -45,5 +45,5 @@ void printList() {
         printf("%d ", temp->data); // Print the data of each node
         temp = temp->next;         // Move to the next node
     }
-    printf("\n"); // Print a newline at the end
+    printf("\n"); 
 }
